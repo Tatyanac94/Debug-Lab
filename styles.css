@@ -1,5 +1,5 @@
 /* Question 1: Why is the counter value not centered? (vertically) */
-/*The counter is not centered vertically because the counter-value element is not centered. */
+/*It is not centered vertically because the properties of 'position', 'top', and 'transform' need to be applied to the counter-value element. */
 body {
   display: flex;
   justify-content: center;
@@ -14,7 +14,17 @@ body {
 
 #counter-value {
   font-size: 48px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+ 
+
+
+ 
   /* Question 2: Why is the color not applying to the counter value? */
-  /*The color is not applying to the counter value because the counter-value class is not defined. */
-  text-emphasis-color: #FF6347;
+  /*The color is not applying to the counter value because the text-emphasis property is used to apply emphasis marks to text. I added 'color' to apply a color change.*/
+  color: #FF6347;
+ 
+
+
 }

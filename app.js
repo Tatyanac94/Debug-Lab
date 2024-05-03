@@ -1,6 +1,6 @@
 // Question 3: Why does the counter start at NaN?
 //Because the counter value is not a number.
-let count = parseInt(document.getElementById('counter-value').innerText);
+let count = 0;
 
 const incrementButton = document.getElementById('increment');
 const decrementButton = document.getElementById('decrement');
@@ -9,20 +9,20 @@ const resetButton = document.getElementById('reset');
 // Question 4: What happens to the counter value in the HTML when increment is clicked?
 // The counter value increases by 1.
 incrementButton.addEventListener('click', function() {
-  debugger
+    debugger
     count++;
     document.getElementById('counter-value').innerText = count;
 });
 
 // Question 5: Why does the decrement button not work?
-// The decrement button is not working because the count variable is not defined.
+// The decrement button is not working because the count variable is not a number.
 decrementButton.addEventListener('click', function() {
     count--;
-    document.getElementById('count-value').innerText = count;
+    document.getElementById('counter-value').innerText = count;
 });
 
 // Question 6: Why does the reset function set the count to '0' as a string?
-// The reset function sets the count to '0' as a string.
+// The reset function sets the count to '0' as a string the count variable is a string.
 resetButton.addEventListener('click', function() {
     count = '0';
     document.getElementById('counter-value').innerText = count;
